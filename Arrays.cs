@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 
 namespace Arrays
@@ -172,7 +173,7 @@ namespace Arrays
         // Construir um array C, onde cada elemento de C é a soma do elemento correspondente de A com b. 
         // Colocar em ordem crescente a matriz C e apresentar os seus valores.
         {
-            const int arrayLength = 5;
+            const int arrayLength = 3;
             var a = new double[arrayLength];
             var b = new double[arrayLength];
             var c = new double[arrayLength];
@@ -181,18 +182,37 @@ namespace Arrays
             {
                 System.Console.WriteLine("Forneça um número para A:");
                 a[i] = double.Parse(Console.ReadLine());
+                
+                System.Console.WriteLine("Forneça um número para B:");
+                b[i] = double.Parse(Console.ReadLine());                
             }
             
+            System.Console.WriteLine("\nOrdem crescente de A:");
             foreach (var item in a)
             {
-                System.Console.WriteLine("Ordem crescente de A:");
                 System.Console.WriteLine(item);
             }
+            
+            System.Console.WriteLine("\nOrdem inversa de B:");
+            
+            // for (int i = 2; i > -1; i--)
+            // {
+            //     System.Console.WriteLine(b[i]);
+            // }
+            
+            // System.Console.WriteLine(b.Reverse());
+
+            for (int i = b.Length - 1; i > -1 ; i--)
+            {
+                System.Console.WriteLine(b[i]);
+            }
+
+            System.Console.WriteLine("\nSomatória de A com B:");
 
             for (int i = 0; i < arrayLength; i++)
             {
-                System.Console.WriteLine("Forneça um número para B:");
-                b[i] = double.Parse(Console.ReadLine());                
+                c[i] = a[i] + b[i];
+                System.Console.WriteLine(c[i]);
             }
 
         }
