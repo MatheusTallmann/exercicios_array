@@ -23,30 +23,32 @@ namespace exercicios_array
             // return x.;
         }
         
-        // public List<double> Exercises2(List<double> a)
-        // // Ler um array com 10 inteiros e mostrar os números na ordem direta e inversa a que foram lidos.
-        // {
-        //     var ordemDireta = new List<double>();
-        //     var ordemInversa = new List<double>();
-        //     var expected = new List<double>();
+        public List<(double, double)> Exercise2(List<double> array)
+        // Ler um array com 10 inteiros e mostrar os números na ordem direta e inversa a que foram lidos.
+        {
+            var ordens = new List<(double direto, double inverso)>();
 
-        //     for (int i = 0; i < a.Count; i++)
-        //     {
-        //         ordemDireta.Add(a[i]);
-        //     }
+            var ordemDireta = ordens.Select(item => item.direto).ToList();
 
-        //     for (int i = a.Count - 1; i >= 0 ; i--)
-        //     {
-        //         ordemInversa.Add(a[i]);
-        //     }
-        //     expected.Join(ordemDireta, ordemInversa);
-        // }
+            for (int i = 0; i < array.Count; i++)
+            {
+                ordemDireta.Add(array[i]);
+            }
+
+            array.Reverse();
+            for (int i = 0; i < array.Count; i++)
+            {
+                ordens.Add((ordemDireta[i], array[i]));
+            }
+
+            return ordens;
+        }
         public string Exercises3(List<double> a, double number)
         // Leia 10 elementos e armazene em um array A. 
         // Em seguida, solicite pelo teclado um número qualquer e pesquise no array se o número existe. 
         // Caso, seja verdade imprima a mensagem: “O número existe no array”, caso contrário “Número inexistente”.
         {
-            
+            return "";    
         }
     
     }
