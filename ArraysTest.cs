@@ -102,7 +102,8 @@ namespace exercicios_array
             Assert.Equal(expected, expectedValue);
         }
         [Theory]
-        [InlineData(new double[5]{1,2,3,4,5}, new double[5]{1,2,3,4,5},new double[5]{1,2,3,4,5},new double[5]{5,4,3,2,1}, new double[5]{0,0,0,0,0,})]
+        [InlineData(new double[5]{1,2,3,4,5}, new double[5]{1,2,3,4,5}, new double[5]{1,2,3,4,5}, new double[5]{5,4,3,2,1}, new double[5]{2,4,6,8,10})]
+        [InlineData(new double[5]{22,11,33,55,44}, new double[5]{3,5,2,7,11}, new double[5]{11,22,33,44,55}, new double[5]{11,7,5,3,2}, new double[5]{16,25,35,55,62})]
         public void Exercise6(double[] a, double[] b, double[] expectedA, double[] expectedB, double[] expectedC)
         // Leia um array A com 5 elementos. Após sua leitura, 
         // colocar os seus elementos em ordem crescente. 
@@ -114,7 +115,7 @@ namespace exercicios_array
             var exercises = new Arrays();
 
             // Quando / Ação
-            (int[], int[], int[]) returnedValue = exercises.Exercise6(listA.ToList(), listB.ToList());
+            (double[], double[], double[]) returnedValue = exercises.Exercise6(a, b);
 
             // Deve / Asserções
             Assert.Equal(expectedA, returnedValue.Item1);
