@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace exercicios_array
 {
-    class Arrays
+    public class Arrays
     {
         public List<double> Exercise1(List<double> a, List<double> b)
         // Leia dois arrays A e B com 15 elementos. Construir um array C, 
@@ -115,15 +115,26 @@ namespace exercicios_array
             }
             return $"{aboveAverage}, {belowAverage}, {onAverage}";
         }
-        public (int[], int[], int[]) Exercises6(List<double> a, List<double> b)
+        public (double[], double[], double[]) Exercise6(double[] a, double[] b)
         // Leia um array A com 12 elementos. Após sua leitura, 
         // colocar os seus elementos em ordem crescente. 
         // Depois ler um array B também com doze elementos, colocar os elementos de B em ordem decrescente. 
         // Construir um array C, onde cada elemento de C é a soma do elemento correspondente de A com b. 
         // Colocar em ordem crescente a matriz C e apresentar os seus valores.
         {
-            a.Sort();
+            var c = new double[5];
+                        
+            for (int i = 0; i < c.Length; i++)
+            {
+                c[i] = b[i] + a[i]; 
+            }
+            
+            Array.Sort(a);
+            Array.Sort(b);
+            Array.Reverse(b);
 
+            Array.Sort(c);
+            return (a, b, c);
         }
     }
 
