@@ -126,6 +126,7 @@ namespace exercicios_array
         
         [Theory]
         [InlineData(new string[6]{"a","b","c","d","e","f"}, 2)]
+        [InlineData(new string[6]{"a","e","i","o","e","u"}, 6)]
         public void Exercise8(string[] letras, int expected)
         //Crie um vetor de strings de 10 posições onde cada posição recebe uma letra do alfabeto. 
         //No final, imprima quantas destas são vogais.
@@ -157,15 +158,19 @@ namespace exercicios_array
             Assert.Equal(expected, atualValue);
         }
 
-        // public void Exercise9(List<double> a) 
-        // // A aplicação deverá retornar um vetor A e imprimir na tela quantas vezes há um número residindo na mesma posição do vetor que seu valor numérico.
-        // {
-        //     a.Select(item =>
-        //     {
-        //         return item == a.IndexOf(item);
-        //     }).Count();
+        public void TestVini(List<double> a, List<char> letras) 
+        // A aplicação deverá retornar um vetor A e imprimir na tela quantas vezes há um número residindo na mesma posição do vetor que seu valor numérico.
+        {
+            a.Select(item =>
+            {
+                return item == a.IndexOf(item);
+            }).Count();
             
-        //     a.Where(item => item == a.IndexOf(item)).Count();
-        // }
+            a.Where(item => item == a.IndexOf(item)).Count();
+            
+            var vogais = new List<string>{"a","e","i","o","u"};
+            // letras.Select(x => );
+
+        }
     }
 }

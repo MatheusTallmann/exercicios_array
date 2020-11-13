@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Text;
 
-namespace exercicios_array
+namespace Arrays
 {
-    class ExercisesArrays
+    class Arrays
     {
         static void Exercise1()
         // Leia dois arrays A e B com 15 elementos. Construir um array C, 

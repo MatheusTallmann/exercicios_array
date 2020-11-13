@@ -123,10 +123,10 @@ namespace exercicios_array
         // Colocar em ordem crescente a matriz C e apresentar os seus valores.
         {
             var c = new double[5];
-                        
+
             for (int i = 0; i < c.Length; i++)
             {
-                c[i] = b[i] + a[i]; 
+                c[i] = a[i] + b[i];
             }
             
             Array.Sort(a);

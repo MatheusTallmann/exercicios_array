@@ -118,38 +118,34 @@ namespace exercicios_array
         //Crie um vetor de strings de 10 posições onde cada posição recebe uma letra do alfabeto. 
         //No final, imprima quantas destas são vogais.
         {
-            var vogais = new List<string>{"a","e","i","o","u"};
-            var counter = 0;
+            // var vogais = new List<string>{"a","e","i","o","u"};
+            // var counter = 0;
 
-            foreach (var item in vogais)
-            {
-                for (int i = 0; i < letras.Count; i++)
-                {
-                    if (letras[i] == item)
-                    {
-                        counter++;
-                    }
-                }
-            }
-
-            return counter;
+            // for (int i = 0; i < vogais.Count; i++)
+            // {
+            //     counter += letras.Where(item => item == vogais[i]).Count();
+            // }
+            
+            return letras.Where(item => item == "a" || item == "e" || item == "i" || item == "o" || item == "u").Count();
         }
 
         public string Exercise9(List<string> letras)
         //Crie um vetor de strings de 10 posições onde cada posição recebe uma letra do alfabeto. 
         //No final, imprima a string resultante da soma das strings que residem em índices pares.
         {
-            var palavra = new List<string>();
+            // var palavra = new List<string>();
+            var word = "";
 
             for (int i = 0; i < letras.Count; i++)
             {
                 if (i % 2 == 0)
                 {
-                    palavra.Add(letras[i]);        
+                    word += $"{letras[i]}"; 
+                    // palavra.Add(letras[i]);        
                 }
             }
 
-            return palavra.ToString();
+            return word;
         }
     }
 }
