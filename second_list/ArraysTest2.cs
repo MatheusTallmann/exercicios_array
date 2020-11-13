@@ -134,7 +134,7 @@ namespace exercicios_array
             var exercises = new Arrays2();
 
             // Quando / Ação
-            var atualValue = exercises.Exercise8(a.ToList());
+            var atualValue = exercises.Exercise8(letras.ToList());
 
             // Deve / Asserções
             Assert.Equal(expected, atualValue);
